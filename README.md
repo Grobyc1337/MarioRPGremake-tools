@@ -1,6 +1,6 @@
 # MarioRPGremake Modding Tools v1.0
 
-These tools lets you add new spells for enemies in Mario RPG Remake
+These tools lets you add new spells for enemies in Mario RPG Remake  TEst
 ```
 With these tools you can add new components (spells) in the following .json list :
 1 - action.json
