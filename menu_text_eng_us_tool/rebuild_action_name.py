@@ -1,3 +1,5 @@
+# Made by Maxtoad & Grobyc
+
 import json
 import os
 import sys

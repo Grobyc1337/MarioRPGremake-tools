@@ -1,3 +1,5 @@
+# Made by Maxtoad & Grobyc
+
 from ast import Dict
 from enum import Enum
 import sys
@@ -6,14 +8,9 @@ import os.path
 from typing import List
 from json.decoder import JSONDecodeError
 
-#import msvcrt as m   LIES
-
-#def wait():  LIES
-#    m.getch() LIES
 ##########################################
 #               FUNCTIONS
 ##########################################
-
 
 def create_new_cwi_action(a_object_id, m_skill_id, string_id, string_name):
     return ["ClassWithId", {"ObjectId": a_object_id, "MetadataId": 33, "Values": [["m_id : Primitive", m_skill_id],
@@ -47,7 +44,7 @@ with open('menu_text_eng_us.json', 'r') as input_file:
 # display_amount_changed = amount_to_add  # Keep the str() to display it later
 
 
-# ME ADDING BUNCH OF CRAP VAR LOL
+# Adding a bunch of Var
 new_list = False      # Asking if the list is genuine
 the_list_2 = []       # Create a second list that we will use
 new_list_test = []
@@ -57,7 +54,7 @@ max_new_id = 0
 max_new_ba_id = 0
 last_o_id = 0
 d_object_id = 0
-# Hugues's Vars
+# Maxtoad's Vars
 object_index = -1
 objects = {}
 objects_by_type = {}
@@ -69,7 +66,7 @@ item_type = -1
 object_id = -1
 new_index_add = -1
 
-# ~~~ START HUGUES MASTER CODE ~~~
+# ~~~ START MAXTOAD's MASTER CODE ~~~
 for item in data.values():   #data.values()
     item_class = item[0]
     item_value = item[1]
@@ -127,7 +124,7 @@ for action in actions:
 
     #print('')
 
-# ~~~ END HUGUES MASTER CODE ~~~
+# ~~~ END MAXTOAD's MASTER CODE ~~~
 
 # ~~~ MON CODE START ~~~
 # Find length of Table action_name  (answer is 750)
@@ -141,11 +138,9 @@ for classes in new_list_test:
     if classes > last_o_id:
         last_o_id = classes
 
-
 last_skill_id = objects_by_type['action_name'][0][1]['Lengths'][0]
 # Find last string_id in action_name list
 last_action_string_id = actions[-1][1]['Values'][1][1][1]['ObjectId']
-
 
 # Ask user how many Action's Name they want to add
 amount_to_add = input("How many new Action's Name would you like to add? : ")
@@ -156,13 +151,6 @@ except ValueError:
     print("That's not an int!")
     print("Stop it....get some help")
     sys.exit()
-
-
-
-
-
-
-
 
 
 
@@ -182,8 +170,6 @@ else:
 # Use a different value if the list already has been edited !!!
 
 blank_new_name = 'Blank Name'  # Put blank name when creating more than 1 spell
-
-
 
 # ~~~~~~~~  If input is > 1 -> Generate "x" Blank Name Spells  ~~~~~~~~
 
@@ -238,9 +224,6 @@ if amount_to_add > j:  # j = 1  here
                     new_index_add = 3163
                 else:
                     new_index_add = 3163 + (last_skill_id - 750) * 2
-
-                    #if item3[1]['ObjectId'] == max_new_id:
-                    #    new_index_add = object_id2 #the_list_2.index(item3[1]['ObjectId'])
 
         while k < amount_to_add:
             new_skill_id = last_skill_id + (k + 1)
