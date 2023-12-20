@@ -16,10 +16,10 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         raise Exception("Pass in an argument for input file")
     input_file = sys.argv[1]
-    if not '_simplified.json' in input_file:
-        raise Exception("File pass in input does not contain _simplified.json which is probably wrong")
+    if not '_simplified_added.json' in input_file:
+        raise Exception("File pass in input does not contain _simplified_added.json which is probably wrong")
 
-    output_file = os.path.relpath(input_file.replace('_simplified.json', '.json'), os.getcwd())
+    output_file = os.path.relpath(input_file.replace('_simplified_added.json', '.json'), os.getcwd())
     output_dir = os.path.join('output', os.path.dirname(output_file))
     output_file = os.path.basename(output_file)
 
