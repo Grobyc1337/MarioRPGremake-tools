@@ -1,4 +1,4 @@
-# MarioRPGremake Modding Tools
+# MarioRPGremake Modding Tools v1.0
 
 These tools lets you add new spells for enemies in Mario RPG Remake
 ```
