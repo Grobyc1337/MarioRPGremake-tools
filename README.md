@@ -3,9 +3,9 @@
 These tools lets you add new spells for enemies in Mario RPG Remake
 ```
 With these tools you can add new components (spells) in the following .json list :
-1 - action.json
-2 - battle_motion_monster.json
-3 - menu_text_eng_us.json
+1 - action.json  (spell data)
+2 - battle_motion_monster.json (spell animation)
+3 - menu_text_eng_us.json (spell name)
 
 How to use : 
 eg. : Using the action.json -> drop your .json in the corresponding folder (action_tool folder in this example)
