@@ -16,7 +16,8 @@ the_list_2 = []
 with open('battle_motion_player.json', 'r') as input_file:
     data = json.load(input_file)
 
-skill_to_extract = input("Which Skill would you like to extract? : ")
+
+skill_to_extract = input("Which Skill ID would you like to extract? : ")
 display_skill_extracted = skill_to_extract  # Keep the str() to display it later
 try:
     val = int(skill_to_extract)
@@ -46,9 +47,7 @@ if the_list_2 == []:
 #print(the_list_2)
 
 print("""
-You Extracted Skill ID """ + display_skill_extracted + """
-press enter to finish program!""")
-input()
+You Extracted Skill ID """ + display_skill_extracted + """!""")
 
 output_file = 'Skill_' + display_skill_extracted + '.json'
 #output_file = os.path.relpath(input_file.replace('battle_motion_player.json', 'Skill' + display_skill_extracted + '.json'), os.getcwd())

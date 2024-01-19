@@ -11,7 +11,7 @@ if __name__ == "__main__":
         raise Exception("Pass in an argument for input file")
 
     input_file = sys.argv[1]
-    output_file = input_file.replace('.json','_simplified.json')
+    output_file = input_file.replace('.json','_imported.json')
 
 
     skill_to_import = input("Which Skill would you like to import? : ")
@@ -55,3 +55,6 @@ if __name__ == "__main__":
                 objects.append(value)
     with open(output_file, 'w') as output:
       output.write(json.dumps(objects, indent=2))
+
+    print("""
+    You Succesfuly Imported Skill ID """ + display_skill_imported)

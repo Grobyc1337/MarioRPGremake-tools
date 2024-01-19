@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Tool by Echocolat  ->  Hotfixed by ObsidianMaker
+
 import sys
 import json
 import struct
@@ -12,14 +14,14 @@ def Length(string):
     value = len(string)
     ret = bytearray()
     while value >= 0x80:
-        ret += chr((value | 0x80)&0xff).encode('utf-8')
+        ret += struct.pack("<B",(value | 0x80)&0xff)
         value >>= 7
-    ret += chr(value).encode('utf8')
-
+    ret += struct.pack("<B",value)
     return ret
 
 def LengthPrefixedString(string, options=''):
     ret = Length(string.encode('utf8'))+string.encode('utf8')
+    print(ret)
     return ret
 
 def ClassInfo(s):
@@ -270,6 +272,7 @@ def ArrayOfValueWithCode(s):
 def StringValueWithCode(s):
     ret = bytearray()
     ret += struct.pack('<B', PrimitiveTypeEnumeration['String'][0])
+    print(ret)
     ret += LengthPrefixedString(s)
     return ret
 

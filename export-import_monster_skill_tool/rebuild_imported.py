@@ -18,10 +18,10 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         raise Exception("Pass in an argument for input file")
     input_file = sys.argv[1]
-    if not '_simplified.json' in input_file:
-        raise Exception("File pass in input does not contain _simplified_added.json which is probably wrong")
+    if not '_imported.json' in input_file:
+        raise Exception("File pass in input does not contain _imported.json which is probably wrong")
 
-    output_file = os.path.relpath(input_file.replace('_simplified.json', '.json'), os.getcwd())
+    output_file = os.path.relpath(input_file.replace('_imported.json', '.json'), os.getcwd())
     output_dir = os.path.join('output', os.path.dirname(output_file))
     output_file = os.path.basename(output_file)
 
@@ -78,3 +78,6 @@ if __name__ == "__main__":
 
     with open(os.path.join(output_dir, output_file), "w") as output:
         output.write(json.dumps(output_data, indent=2))
+
+    print("""
+    You Succesfully Rebuilded your battle_motion_monster.json""")
